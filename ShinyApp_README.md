@@ -1,6 +1,6 @@
 # LDC RB-TnSeq Screen Shiny App
 
-David Welkie have also created a Shiny web application in R to explor the data in a interactive way. 
+We have also created a Shiny web application in R to explor the data in a interactive way. 
 The code is stored on a Git repository.
 
 Ways to download and run it are below:
