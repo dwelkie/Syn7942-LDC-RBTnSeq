@@ -23,7 +23,10 @@ ui <- fluidPage(
         DT::dataTableOutput("x1"),
         fluidRow(
                 p(class = 'text-center', downloadButton('x3', 'Download Filtered Data')),
-        h2("RBTn-Seq LDC Photobioreactors Data", align = "center")
+        h4(
+"a = Rubin BE, Wetmore KM, Price MN, Diamond S, Shultzaberger RK, Lowe LC, Curtin G, Arkin AP, Deutschbauer A, Golden SS. 2015. The essential gene set of a photosynthetic organism. Proc Natl Acad Sci U S A doi:10.1073/pnas.1519220112
+b = Markson JS, Piechura JR, Puszynska AM, O'Shea EK. 2013. Circadian control of global gene expression by the cyanobacterial master regulator RpaA. Cell 155:1396-1408, 
+c = Diamond S, Rubin BE, Shultzaberger RK, Chen Y, Barber CD, Golden SS. 2017. Redox crisis underlies conditional light-dark lethality in cyanobacterial mutants that lack the circadian regulator, RpaA. Proc Natl Acad Sci U S A 114:E580-E589", align = "center")
         )
 )
 
