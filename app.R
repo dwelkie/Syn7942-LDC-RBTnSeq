@@ -22,7 +22,8 @@ ui <- fluidPage(
         verbatimTextOutput("zoom"),
         DT::dataTableOutput("x1"),
         fluidRow(
-                p(class = 'text-center', downloadButton('x3', 'Download Filtered Data'))
+                p(class = 'text-center', downloadButton('x3', 'Download Filtered Data')),
+        h2("RBTn-Seq LDC Photobioreactors Data", align = "center")
         )
 )
 
