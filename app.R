@@ -14,7 +14,10 @@ m <- data %>%
         tibble::rownames_to_column()
 
 ui <- fluidPage(
-        h1("RBTn-Seq LDC Photobioreactors Data", align = "center"),
+        h1("Random Bar Code Transposon Sequencing Results for Strain Fitness Analysis of Synechococcus sp. PCC 7942 in Light-Dark Cycles", align = "left"),
+        h4("Genome-wide fitness assessment during diurnal growth reveals an expanded role of the cyanobacterial circadian clock protein KaiA"),
+        h5("David G. Welkie, Benjamin E. Rubin, Yong-Gang Chang, Spencer Diamond, Scott A. Rifkin, Andy LiWang, and Susan S. Golden"),
+        h5("PNAS July 24, 2018 115 (30) E7174-E7183; https://doi.org/10.1073/pnas.1802940115"),
         plotlyOutput("x2"),
         verbatimTextOutput("hover"),
         verbatimTextOutput("click"),
@@ -40,8 +43,8 @@ server <- function(input, output) {
                 s <- input$x1_rows_selected
                 if (!length(s)) {
                         p <- d %>%
-                                plot_ly(x = ~LDC.Sensitivity.Score, y = ~FDR, mode = "markers",
-                                        text = ~paste(locusId,'<br>', Gene.symbol),
+                                plot_ly(x = ~Fitness_Score_LDC, y = ~FDR, mode = "markers",
+                                        text = ~paste(Gene,'<br>', Gene.symbol),
                                         color = ~LDC.Phenotype, name = 'Unfiltered') %>%
                                 layout(yaxis = list(autorange = "reversed")) %>% 
                                 layout(yaxis = list(type = "log")) %>%
@@ -50,13 +53,13 @@ server <- function(input, output) {
                 } else if (length(s)) {
                         pp <- m %>%
                                 plot_ly() %>%
-                                add_trace(x = ~LDC.Sensitivity.Score, y = ~FDR, mode = "markers", color = I('black'), name = 'Unfiltered') %>%
+                                add_trace(x = ~Fitness_Score_LDC, y = ~FDR, mode = "markers", color = I('black'), name = 'Unfiltered') %>%
                                 layout(yaxis = list(autorange = "reversed")) %>% 
                                 layout(yaxis = list(type = "log")) %>%
                                 layout(showlegend = T)
                         
                         # selected data
-                        pp <- add_trace(pp, data = m[s, , drop = F], x = ~LDC.Sensitivity.Score, y = ~FDR, mode = "markers",
+                        pp <- add_trace(pp, data = m[s, , drop = F], x = ~Fitness_Score_LDC, y = ~FDR, mode = "markers",
                                         color = I('red'), name = 'Filtered') %>%
                                 layout(yaxis = list(autorange = "reversed"))  %>%
                                 layout(yaxis = list(type = "log"))
@@ -95,7 +98,7 @@ server <- function(input, output) {
         
         output$x4 <- renderPlotly({
                 plot_ly(x1) %>%
-                        add_pie(data = count(data, LDC.Sensitivity.Score), labels = ~LDC.Sensitivity.Score, values = ~n,
+                        add_pie(data = count(data, Fitness_Score_LDC), labels = ~Fitness_Score_LDC, values = ~n,
                                 name = "Phenotype", domain = list(x = c(0, 0.4), y = c(0.4, 1)))
         })
         
