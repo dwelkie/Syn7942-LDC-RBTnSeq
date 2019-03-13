@@ -1,6 +1,6 @@
 # Syn7942-LDC-RBTnSeq
 
-[![Shiny](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dwelkie/Syn7942-LDC-RBTnSeq/master?filepath=shiny%2FLD-Volcano)
+[![Shiny](https://github.com/dwelkie/Syn7942-LDC-RBTnSeq/blob/master/R_Shiny_app-logo.png](https://dwelkie.shinyapps.io/S7942_LDC_RbTnSeq_Data_App/)
 
 
 
