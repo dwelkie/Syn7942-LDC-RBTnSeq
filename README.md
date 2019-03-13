@@ -1,4 +1,9 @@
 # Syn7942-LDC-RBTnSeq
+
+[![Shiny](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dwelkie/Syn7942-LDC-RBTnSeq/master?filepath=shiny%2FLD-Volcano)
+
+
+
 Shiny App for Synechococcus 7942 LDC RB-TnSeq Data
 
 
