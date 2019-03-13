@@ -1,0 +1,11 @@
+install.packages("shiny")
+install.packages("DT")
+install.packages("plotly")
+install.packages("crosstalk")
+install.packages("tidyverse")
+install.packages("rmarkdown")
+install.packages("httr")
+install.packages("shinydashboard")
+install.packages('leaflet')
+install.packages('ggplot2')
+
