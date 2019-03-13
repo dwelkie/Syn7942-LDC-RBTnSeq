@@ -1,6 +1,6 @@
 # Syn7942-LDC-RBTnSeq
 
-![Shiny](https://github.com/dwelkie/Syn7942-LDC-RBTnSeq/blob/master/R_Shiny_app-logo.png)(https://dwelkie.shinyapps.io/S7942_LDC_RbTnSeq_Data_App/)
+![https://github.com/dwelkie/Syn7942-LDC-RBTnSeq/blob/master/R_Shiny_app-logo.png](https://dwelkie.shinyapps.io/S7942_LDC_RbTnSeq_Data_App/)
 
 
 
